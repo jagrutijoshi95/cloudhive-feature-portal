@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "summary": "API Integration Dashboard",
+    "description": "Create a visual dashboard that shows all current integrations, their status, and performance metrics in real-time. This would help users monitor and troubleshoot their integrations from a single view.",
+    "employeeId": "1",
+    "employeeName": "Alice Johnson",
+    "employeeImage": "https://randomuser.me/api/portraits/women/1.jpg",
+    "priority": "High",
+    "upvotes": 15,
+    "downvotes": 2,
+    "createdAt": "2025-03-15T08:30:00Z"
+  },
+  {
+    "id": "2",
+    "summary": "Automated Error Recovery",
+    "description": "Implement an AI-powered system that can automatically detect common integration errors and suggest or apply fixes without human intervention. This would reduce downtime and support tickets.",
+    "employeeId": "3",
+    "employeeName": "Charlie Davis",
+    "employeeImage": "https://randomuser.me/api/portraits/men/3.jpg",
+    "priority": "Medium",
+    "upvotes": 12,
+    "downvotes": 4,
+    "createdAt": "2025-03-14T14:45:00Z"
+  },
+  {
+    "id": "3",
+    "summary": "Drag-and-Drop Integration Builder",
+    "description": "Create a visual, drag-and-drop interface for building integrations between systems. This would make it easier for non-technical users to create and modify integrations without writing code.",
+    "employeeId": "6",
+    "employeeName": "Fiona Mitchell",
+    "employeeImage": "https://randomuser.me/api/portraits/women/6.jpg",
+    "priority": "High",
+    "upvotes": 20,
+    "downvotes": 1,
+    "createdAt": "2025-03-10T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "summary": "Multi-Environment Support",
+    "description": "Add support for managing integrations across different environments (dev, staging, production) with easy promotion between them. This would align with modern DevOps practices and make the deployment process smoother.",
+    "employeeId": "2",
+    "employeeName": "Bob Smith",
+    "employeeImage": "https://randomuser.me/api/portraits/men/2.jpg",
+    "priority": "Medium",
+    "upvotes": 8,
+    "downvotes": 3,
+    "createdAt": "2025-03-08T16:20:00Z"
+  },
+  {
+    "id": "5",
+    "summary": "Integration Templates Marketplace",
+    "description": "Create a marketplace of pre-built integration templates for common systems and scenarios. Users could browse, customize, and deploy these templates to accelerate their implementation.",
+    "employeeId": "5",
+    "employeeName": "Ethan Parker",
+    "employeeImage": "https://randomuser.me/api/portraits/men/5.jpg",
+    "priority": "Low",
+    "upvotes": 6,
+    "downvotes": 2,
+    "createdAt": "2025-03-05T11:30:00Z"
+  }
+]
