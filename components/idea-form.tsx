@@ -167,7 +167,7 @@ export default function IdeaForm({ employees }: IdeaFormProps) {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700">
+            className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-700">
             {isSubmitting ? "Submitting..." : "Submit Idea"}
           </Button>
         </div>

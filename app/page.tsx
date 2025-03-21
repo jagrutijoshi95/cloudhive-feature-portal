@@ -15,7 +15,7 @@ export default function HomePage() {
         </div>
 
         <Link href="/create">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button className="bg-blue-500 hover:bg-blue-700 text-white">
             + Submit New Idea
           </Button>
         </Link>

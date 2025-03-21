@@ -11,10 +11,22 @@ export default function IdeaList() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Get search and pagination params
+  // Get parameters from URL
   const search = searchParams.get("search") || "";
-  const currentPage = Number(searchParams.get("page") || "1");
+  const pageFromUrl = searchParams.get("page");
+
+  // Keep local state for the current page
+  const [currentPage, setCurrentPage] = useState(
+    pageFromUrl ? parseInt(pageFromUrl) : 1
+  );
   const limit = 20; // Ideas per page
+  console.log("currentPage", currentPage);
+
+  // Update currentPage when URL changes
+  useEffect(() => {
+    const page = pageFromUrl ? parseInt(pageFromUrl) : 1;
+    setCurrentPage(page);
+  }, [pageFromUrl]);
 
   // Use custom hook to fetch ideas
   const { useIdeasQuery } = useIdeas();
@@ -24,11 +36,14 @@ export default function IdeaList() {
     search,
   });
 
-  // Handle pagination
+  // Handle page change - update both URL and local state
   const handlePageChange = (newPage: number) => {
-    const params = new URLSearchParams(searchParams);
+    console.log("newPage", newPage);
+    setCurrentPage(newPage); // Update local state immediately
+
+    const params = new URLSearchParams(searchParams.toString());
     params.set("page", newPage.toString());
-    router.push(`${pathname}?${params.toString()}`);
+    router.replace(`${pathname}?${params.toString()}`); // Use replace to avoid adding to history
   };
 
   // Render loading state
@@ -115,7 +130,7 @@ export default function IdeaList() {
                     onClick={() => handlePageChange(pageNumber)}
                     className={`px-3 py-1 rounded ${
                       pageNumber === currentPage
-                        ? "bg-blue-600 text-white"
+                        ? "bg-blue-500 text-white"
                         : "border border-gray-300 bg-white text-gray-700"
                     }`}>
                     {pageNumber}

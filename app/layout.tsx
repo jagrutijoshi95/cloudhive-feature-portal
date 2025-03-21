@@ -42,7 +42,7 @@ export default function RootLayout({
           <footer className="bg-white mt-auto py-6 border-t">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <p className="text-center text-sm text-gray-500">
-                © 2025 CloudHive. All rights reserved.
+                CloudHive Footer
               </p>
             </div>
           </footer>

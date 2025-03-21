@@ -44,7 +44,7 @@ This project is a proof-of-concept for CloudHive's Feature Idea Portal, an inter
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cloudhive-feature-portal.git
+   git clone https://github.com/jagrutijoshi95/cloudhive-feature-portal.git
    cd cloudhive-feature-portal
    ```
 
@@ -60,48 +60,6 @@ This project is a proof-of-concept for CloudHive's Feature Idea Portal, an inter
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Design Constraints & Assumptions
-
-1. **Data Persistence**
-   - Ideas and employee data are stored in JSON files in the project
-   - No authentication or user sessions are implemented as this is a proof of concept
-
-2. **Server Actions**
-   - Server actions are used to handle data operations (create, read, update, delete)
-   - These directly modify the JSON files for persistence
-
-3. **Optimistic Updates**
-   - TanStack Query is used for client-side state management with optimistic updates for a seamless user experience
-
-4. **Responsive Design**
-   - The UI is designed to work on both desktop and mobile devices
-
-## Potential Future Enhancements
-
-1. **User Authentication**
-   - Implement user authentication to track who submitted ideas and votes
-   - Restrict voting to once per user per idea
-
-2. **Rich Text Editor**
-   - Add a rich text editor for idea descriptions to support formatting, images, and links
-
-3. **Integration Categories**
-   - Add categories for ideas to improve organization and filtering
-
-4. **Notifications**
-   - Implement notifications for when ideas are upvoted, commented on, or status changes
-
-5. **Analytics Dashboard**
-   - Create a dashboard showing trends in idea submissions and voting
-
-6. **Comment System**
-   - Allow employees to comment on ideas for discussion and refinement
-
-7. **Status Tracking**
-   - Add status tracking for ideas (under review, accepted, in development, implemented)
-
-8. **User Profiles**
-   - Create user profiles showing ideas submitted and voting activity
 
 ## License
 

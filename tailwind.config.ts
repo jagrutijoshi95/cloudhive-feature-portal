@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -9,6 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        blue: {
+          600: "#2563eb",
+        },
         primary: {
           DEFAULT: "#3B82F6", // blue-500
           foreground: "#FFFFFF",
@@ -60,7 +64,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typography],
 };
 
 export default config;

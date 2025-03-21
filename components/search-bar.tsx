@@ -30,17 +30,24 @@ export default function SearchBar() {
 
   // Update URL with search params when debounced term changes
   useEffect(() => {
-    const params = new URLSearchParams(searchParams);
+    // Get the current search and page parameters
+    const currentSearch = searchParams.get("search") || "";
 
-    if (debouncedTerm) {
-      params.set("search", debouncedTerm);
-    } else {
-      params.delete("search");
+    // Only update URL if the search term actually changed
+    if (debouncedTerm !== currentSearch) {
+      const params = new URLSearchParams(searchParams);
+
+      if (debouncedTerm) {
+        params.set("search", debouncedTerm);
+      } else {
+        params.delete("search");
+      }
+
+      // Reset to page 1 when search changes (either new search or clearing search)
+      params.set("page", "1");
+
+      router.push(`/?${params.toString()}`);
     }
-
-    params.set("page", "1"); // Reset to first page when search changes
-
-    router.push(`/?${params.toString()}`);
   }, [debouncedTerm, router, searchParams]);
 
   return (
